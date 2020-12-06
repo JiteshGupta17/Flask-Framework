@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home Page</title>
+</head>
+<body>
+	<h1>
+		 Heading 1
+	</h1>
+
+	<h3>
+		Heading 2
+	</h3>
+
+	{% if num > 10 %}
+		<p> {{num}} is greater than 10 </p>
+	{% else %}
+		<p> {{num}} is smaller than 10 </p>
+	{% endif %}
+
+	{% for f in my_friends %}
+
+		<h2> {{f}} </h2>
+
+	{% endfor %}
+
+	<form method = "POST" action = "/submit" enctype="multipart/form-data">  <!-- enctype only to be wtiiten when file to be taken as an input as it mentions how to encode the file-->
+
+		<input type = "text" name = "username" placeholder="Enter your name">
+		<input type = "number" name = "no1" placeholder="Enter first number">
+		<input type = "number" name = "no2" placeholder="Enter second number">
+		<input type="file" name="userfile">
+		<input type = "submit">
+	</form>
+
+</body>
+</html>>
